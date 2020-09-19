@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="{{url_for('static', filename = '/image/logo.png') }}">
+	<title>Hello World!</title>
+</head>
+<body><center>
+
+	<h2> Enough looking Moody diagram... <br>  Now use this page. </h2><br>
+
+	<form action="{{ url_for('inputs') }}" method="POST">
+			<div id="input-field">
+				<label>e/d Ratio</label><br>
+				<input type="text" name="data1" height="35px" placeholder="{{data.ed}}"><br><br>
+
+				<label>Re Number</label><br>
+				<input type="text" name="data2" height="35px" placeholder="{{data.Re}}"><br><br>	
+			</div>
+			<div id ="add-item-btn"><button type="submit">Enter Data</button></div>
+	</form>
+
+	<h3>Friction factor = {{data.f}}</h3>
+		
+</center></body>
+</html>
